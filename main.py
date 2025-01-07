@@ -4,10 +4,14 @@ def main():
     word_count = get_word_count(text)
     num_letters = get_letter_count(text)
 #    print(text)
+    print(f"--- Begin report of {book_path} ---")
     print(f"{word_count} words found in this document.")
+    print()
+    #prints letter count in a readable list
     for letter, count in num_letters.items():
         print(f"The letter {letter.capitalize()} occured {count} times.")
-
+    print("--- End Report ---")
+    
 def get_book_text(path):
     with open(path) as f:
         return f.read()
